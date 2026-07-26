@@ -26,8 +26,8 @@ Python ve `discord.py` ile geliştirilmiş, kapsamlı **Moderasyon, Güvenlik, S
 
 1. **Repoyu İndirin:**
    ```bash
-   git clone https://github.com/favianan/Discord-Server-Cloner.git
-   cd Discord-Server-Cloner
+   git clone https://github.com/favianan/Discord-Bot.git
+   cd Discord-Bot
    ```
 
 2. **Gerekli Kütüphaneleri Yükleyin:**
