@@ -1,80 +1,67 @@
-# 🚀 Discord Server Cloner & Multipurpose Bot
+# 🤖 Gelişmiş Discord Botu (Multipurpose Bot & Server Cloner)
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![discord.py](https://img.shields.io/badge/discord.py-2.3%2B-blueviolet.svg)](https://github.com/Rapptz/discord.py)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A powerful, modular Discord tool set built with `discord.py` containing both a **Server Cloner Tool** and a **Multipurpose Management Bot** with interactive panels.
+Python ve `discord.py` ile geliştirilmiş, kapsamlı **Moderasyon, Güvenlik, Seviye, Çekiliş, Karşılama ve Sunucu Klonlama** özelliklerine sahip gelişmiş bir Discord botu projesidir.
 
 ---
 
-## 🌟 Key Features
+## 🌟 Bot Özellikleri (`main.py`)
 
-### 🛠️ Server Cloner (`Cloner.py`)
-- 🎭 **Role Cloning**: Preserves permissions, colors, hoist, and mentionable settings.
-- 📁 **Channel & Category Cloning**: Replicates text/voice channels and categories with exact permission overwrites.
-- 😀 **Emoji & Sticker Cloning**: Clones custom static/animated emojis and server stickers.
-- 🎛️ **Modular Menu**: Choose full cloning or selectively clone roles, channels, emojis, or stickers.
-
-### 🛡️ Multipurpose Bot (`main.py`)
-- 🛡️ **Security & Moderation**: Auto-moderation (spam, caps, swear filter, link filter, whitelist) and moderation commands (`ban`, `kick`, `mute`, `warn`).
-- 📈 **Leveling System**: XP system with custom notification channels and role rewards.
-- 👋 **Welcome System**: Customizable join/leave messages and channels.
-- 🎉 **Giveaways & Utility**: Interactive giveaways, help menu, ping, user/server info, and voice channel keep-alive.
+- 🛡️ **Güvenlik & Auto-Mod**: Spam koruması, büyük harf (caps) engeli, küfür filtresi, reklam/link engeli ve beyaz liste (whitelist) sistemi.
+- 🔨 **Gelişmiş Moderasyon**: `/ban`, `/unban`, `/kick`, `/mute`, `/unmute`, `/uyar`, `/uyarılar`, `/temizle`, `/kilitle`, `/yavaslat` komutları.
+- 📈 **Seviye (Leveling) Sistemi**: Mesaj attıkça tecrübe puanı (XP) kazanma, seviye atlama kartları (`/rank`), seviyeye özel otomatik rol ödülleri.
+- 👋 **Karşılama (Welcome) Sistemi**: Sunucuya giren ve çıkan üyeler için özelleştirilebilir resimli/metinli karşılama mesajları.
+- 🎉 **Çekiliş (Giveaway) Sistemi**: Butonlu ve süreli gelişmiş çekiliş başlatma ve otomatik kazanan seçme.
+- ⚙️ **İnteraktif Kontrol Paneli**: Butonlu ve menülü gelişmiş sunucu yönetim paneli (`c!panel` / `/panel`).
+- 🔊 **Ses Kanalı Koruması**: Botun ses kanalında kesintisiz aktif kalması ve otomatik yeniden bağlanma (`/sesegir`).
+- 💬 **Kelime Filtresi**: Sunucuya özel yasaklı kelime ekleme/çıkarma ve otomatik temizleme.
+- 🛠️ **Sunucu Klonlama (`Cloner.py`)**: Roller, kanallar, kategoriler, emojiler ve çıkartmaları birebir kopyalama aracı.
 
 ---
 
-## 🚀 Installation & Setup
+## 🚀 Kurulum ve Çalıştırma
 
-1. **Clone the Repository:**
+1. **Repoyu İndirin:**
    ```bash
    git clone https://github.com/favianan/Discord-Server-Cloner.git
    cd Discord-Server-Cloner
    ```
 
-2. **Install Dependencies:**
+2. **Gerekli Kütüphaneleri Yükleyin:**
    ```bash
    pip install -r requirements.txt
    ```
 
----
+3. **Botu Çalıştırın (`main.py`):**
+   ```bash
+   # Windows (PowerShell)
+   $env:BOT_TOKEN="BOT_TOKENINIZ"
+   python main.py
 
-## 💻 How to Use
+   # Linux / macOS
+   export BOT_TOKEN="YOUR_BOT_TOKEN"
+   python main.py
+   ```
 
-### 1️⃣ Server Cloner Tool
-Run the interactive cloner script:
-```bash
-python Cloner.py
-```
-Follow the CLI prompts:
-1. Enter User Token / Bot Token
-2. Enter Source Server ID
-3. Enter Target Server ID
-4. Select cloning options (1-7)
-
-### 2️⃣ Multipurpose Bot
-Set your bot token in your environment and run:
-```bash
-# Windows (PowerShell)
-$env:BOT_TOKEN="YOUR_BOT_TOKEN"
-python main.py
-
-# Linux / macOS
-export BOT_TOKEN="YOUR_BOT_TOKEN"
-python main.py
-```
+4. **Sunucu Klonlama Aracını Çalıştırın (`Cloner.py`):**
+   ```bash
+   python Cloner.py
+   ```
 
 ---
 
-## ⚙️ Configuration & Customization
+## ⚙️ Prefix ve Yapılandırma
 
-- **Prefix**: Set in `main.py` (`command_prefix="c!"`). You can change `"c!"` to any prefix like `"!"` or `"."`.
-- **Help Menu**: Accessible via `/yardım` or `c!yardım`.
+- **Prefix Değiştirme**: `main.py` dosyasındaki `command_prefix="c!"` kısmından botun prefix'ini değiştirebilirsiniz (Örn: `!`, `.`, `?`).
+- **Yardım Menüsü**: Bot içerisinden `/yardım` veya `c!yardım` komutu ile interaktif yardım menüsüne ulaşabilirsiniz.
 
 ---
 
-## 📄 License
+## 📄 Lisans
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MIT Lisansı ile lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakabilirsiniz.
 
-Developed by **Yusuf Cebeci @58tc**
+Geliştirici: **Yusuf Cebeci @58tc**
