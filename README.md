@@ -6,6 +6,8 @@
 
 Python ve `discord.py` ile geliştirilmiş, modüler mimariye sahip gelişmiş **Discord Sunucu Yönetim, Moderasyon, Güvenlik, Seviye, Çekiliş ve Karşılama Botu**.
 
+Dahili **Flask Web Sunucusu (Keep-Alive)** desteği sayesinde **Replit** ve **UptimeRobot** ile 7/24 kesintisiz çalıştırılabilir.
+
 ---
 
 ## 🌟 Bot Özellikleri
@@ -22,7 +24,33 @@ Python ve `discord.py` ile geliştirilmiş, modüler mimariye sahip gelişmiş *
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## 🌐 Replit & UptimeRobot ile 7/24 Ücretsiz Deploy (Hosting)
+
+Botun içerisinde dahili **Flask Keep-Alive** sunucusu entegrelidir. Aşağıdaki adımları izleyerek botu bilgisayarınızı açık tutmadan 7/24 çalıştırabilirsiniz:
+
+### 1️⃣ Replit Kurulumu:
+1. [Replit.com](https://replit.com) sitesine giriş yapın.
+2. **Create Repl** ➔ **Import from GitHub** seçeneğine tıklayın.
+3. URL alanına `https://github.com/favianan/Discord-Bot` yazıp repoyu aktarın.
+4. Sol menüden **Tools ➔ Secrets** (Kilit simgesi) sekmesini açın:
+   - **Key:** `BOT_TOKEN`
+   - **Value:** `Discord Bot Tokeniniz`
+   - **Add Secret** butonuna tıklayın.
+5. Üstteki **Run** butonuna basarak botu başlatın.
+6. Sağ üst taraftaki **Webview** penceresinde oluşan web adresini kopyalayın (Örn: `https://discord-bot.kullaniciadi.repl.co`).
+
+### 2️⃣ UptimeRobot ile 7/24 Aktif Tutma:
+1. [UptimeRobot.com](https://uptimerobot.com) adresine ücretsiz kaydolun.
+2. **Add New Monitor** butonuna tıklayın:
+   - **Monitor Type:** `HTTP(s)`
+   - **Friendly Name:** `Discord Bot 7/24`
+   - **URL (or IP):** Replit'te kopyaladığınız Webview adresini yapıştırın.
+   - **Monitoring Interval:** `5 minutes` (5 dakikada bir)
+3. **Create Monitor** butonuna basın. Botunuz 7/24 kapanmadan çalışacaktır!
+
+---
+
+## 💻 Yerel (Local) Kurulum
 
 1. **Repoyu İndirin:**
    ```bash
