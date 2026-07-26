@@ -1,24 +1,24 @@
-# 🤖 Gelişmiş Discord Botu (Multipurpose Bot & Server Cloner)
+# 🤖 Discord Bot (Multipurpose Management & Moderation Bot)
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![discord.py](https://img.shields.io/badge/discord.py-2.3%2B-blueviolet.svg)](https://github.com/Rapptz/discord.py)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Python ve `discord.py` ile geliştirilmiş, kapsamlı **Moderasyon, Güvenlik, Seviye, Çekiliş, Karşılama ve Sunucu Klonlama** özelliklerine sahip gelişmiş bir Discord botu projesidir.
+Python ve `discord.py` ile geliştirilmiş, modüler mimariye sahip gelişmiş **Discord Sunucu Yönetim, Moderasyon, Güvenlik, Seviye, Çekiliş ve Karşılama Botu**.
 
 ---
 
-## 🌟 Bot Özellikleri (`main.py`)
+## 🌟 Bot Özellikleri
 
-- 🛡️ **Güvenlik & Auto-Mod**: Spam koruması, büyük harf (caps) engeli, küfür filtresi, reklam/link engeli ve beyaz liste (whitelist) sistemi.
-- 🔨 **Gelişmiş Moderasyon**: `/ban`, `/unban`, `/kick`, `/mute`, `/unmute`, `/uyar`, `/uyarılar`, `/temizle`, `/kilitle`, `/yavaslat` komutları.
-- 📈 **Seviye (Leveling) Sistemi**: Mesaj attıkça tecrübe puanı (XP) kazanma, seviye atlama kartları (`/rank`), seviyeye özel otomatik rol ödülleri.
-- 👋 **Karşılama (Welcome) Sistemi**: Sunucuya giren ve çıkan üyeler için özelleştirilebilir resimli/metinli karşılama mesajları.
-- 🎉 **Çekiliş (Giveaway) Sistemi**: Butonlu ve süreli gelişmiş çekiliş başlatma ve otomatik kazanan seçme.
-- ⚙️ **İnteraktif Kontrol Paneli**: Butonlu ve menülü gelişmiş sunucu yönetim paneli (`c!panel` / `/panel`).
-- 🔊 **Ses Kanalı Koruması**: Botun ses kanalında kesintisiz aktif kalması ve otomatik yeniden bağlanma (`/sesegir`).
-- 💬 **Kelime Filtresi**: Sunucuya özel yasaklı kelime ekleme/çıkarma ve otomatik temizleme.
-- 🛠️ **Sunucu Klonlama (`Cloner.py`)**: Roller, kanallar, kategoriler, emojiler ve çıkartmaları birebir kopyalama aracı.
+- 🛡️ **Güvenlik & Auto-Mod**: Spam koruması, büyük harf (caps) filtresi, küfür engeli, reklam/link engeli ve beyaz liste (whitelist) yönetimi.
+- 🔨 **Moderasyon Komutları**: Üye yasaklama (`/ban`), yasa kaldırma (`/unban`), atma (`/kick`), susturma (`/mute`), susturma kaldırma (`/unmute`), uyarı sistemi (`/uyar`, `/uyarılar`, `/uyarisil`), kanal kilitleme (`/kilitle`), yavaş mod (`/yavaslat`) ve mesaj temizleme (`/temizle`).
+- 📈 **Seviye (Leveling) Sistemi**: Mesaj gönderdikçe XP kazanma, seviye kartı görüntüleme (`/rank`), seviyeye özel otomatik rol ödülleri ve özelleştirilebilir bildirim kanalı.
+- 👋 **Karşılama (Welcome) Sistemi**: Sunucuya yeni katılan ve ayrılan üyeler için özelleştirilebilir karşılama/görüşürüz mesajları ve kanalı.
+- 🎉 **Çekiliş (Giveaway) Sistemi**: Süreli, ödüllü ve butonlu çekiliş başlatma ve otomatik kazanan seçimi (`/çekiliş-başlat`).
+- ⚙️ **İnteraktif Kontrol Paneli**: Butonlu ve açılır menülü gelişmiş sunucu yönetim paneli (`/panel` veya `c!panel`).
+- 🔊 **Ses Kanalı Koruması**: Botun belirlenen ses kanalında 7/24 kesintisiz aktif kalması ve otomatik yeniden bağlanma (`/sesegir`, `/sestenayril`).
+- 💬 **Kelime Filtresi**: Sunucuya özel yasaklı kelime listesi yönetimi (`c!kelimeekle`, `c!kelimesil`, `c!kelimeler`, `c!kelimetemizle`).
+- 🎲 **Eğlence ve Araçlar**: `/espiri`, `/yazıtura`, `/ping`, `/avatar`, `/kb`, `/sb`.
 
 ---
 
@@ -35,28 +35,23 @@ Python ve `discord.py` ile geliştirilmiş, kapsamlı **Moderasyon, Güvenlik, S
    pip install -r requirements.txt
    ```
 
-3. **Botu Çalıştırın (`main.py`):**
+3. **Botu Çalıştırın:**
    ```bash
    # Windows (PowerShell)
-   $env:BOT_TOKEN="BOT_TOKENINIZ"
+   $env:BOT_TOKEN="SENIN_BOT_TOKENIN"
    python main.py
 
    # Linux / macOS
-   export BOT_TOKEN="YOUR_BOT_TOKEN"
+   export BOT_TOKEN="SENIN_BOT_TOKENIN"
    python main.py
-   ```
-
-4. **Sunucu Klonlama Aracını Çalıştırın (`Cloner.py`):**
-   ```bash
-   python Cloner.py
    ```
 
 ---
 
 ## ⚙️ Prefix ve Yapılandırma
 
-- **Prefix Değiştirme**: `main.py` dosyasındaki `command_prefix="c!"` kısmından botun prefix'ini değiştirebilirsiniz (Örn: `!`, `.`, `?`).
-- **Yardım Menüsü**: Bot içerisinden `/yardım` veya `c!yardım` komutu ile interaktif yardım menüsüne ulaşabilirsiniz.
+- **Prefix Değiştirme**: `main.py` dosyasında yer alan `command_prefix="c!"` alanından botun prefix'ini değiştirebilirsiniz (Örn: `!`, `.`, `?`).
+- **Yardım Menüsü**: Bot içerisinden `/yardım` veya `c!yardım` yazarak interaktif yardım menüsünü kullanabilirsiniz.
 
 ---
 
